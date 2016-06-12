@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5B-M4-KJH">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.75294117650000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FVK-rF-E1E"/>
+                                </constraints>
+                                <state key="normal" title="下载">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadBtn_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJ3-jM-tFN"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aGr-zH-gwj">
+                                <rect key="frame" x="0.0" y="506" width="320" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKI-jd-7Js">
+                                <rect key="frame" x="139" y="273.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dKI-jd-7Js" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ex3-Kb-VP7"/>
+                            <constraint firstItem="aGr-zH-gwj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WjM-2H-JS6"/>
+                            <constraint firstAttribute="trailing" secondItem="aGr-zH-gwj" secondAttribute="trailing" id="XPO-VX-Hpu"/>
+                            <constraint firstAttribute="trailing" secondItem="q5B-M4-KJH" secondAttribute="trailing" id="e4N-or-Avy"/>
+                            <constraint firstItem="dKI-jd-7Js" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gUj-Rb-Shp"/>
+                            <constraint firstItem="q5B-M4-KJH" firstAttribute="top" secondItem="aGr-zH-gwj" secondAttribute="bottom" constant="10" id="oY0-Qv-GIk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q5B-M4-KJH" secondAttribute="bottom" id="sWG-3w-5tU"/>
+                            <constraint firstItem="q5B-M4-KJH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tmd-Vh-tWg"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="downloadBtn" destination="q5B-M4-KJH" id="5ew-6T-6lo"/>
+                        <outlet property="progressView" destination="aGr-zH-gwj" id="62m-Hr-OE5"/>
+                        <outlet property="textLab" destination="dKI-jd-7Js" id="bES-ao-ya0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
